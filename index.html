@@ -5,34 +5,89 @@
         
         <!-- Page title -->
         <title>Work with Anakage</title>
+
+        <!-- Google Fonts CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         
         <!-- Reset the CSS -->
         <link rel="stylesheet" href="css/reset.css">
         
         <!-- Document CSS -->
         <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+            }
+
+            h1, h2, h3 {
+                font-family: 'Bungee', cursive;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 24px;
+            }
+
+            main {
+                max-width: 640px;
+            }
+
             nav {
+                margin-bottom: 16px;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
-                padding: 24px
             }
 
             section {
                 margin-bottom: 32px;
             }
 
-            section#banner {
+            #banner {
                 display: flex;
+                align-items: center;
                 margin-bottom: 64px;
             }
 
-            section #instructor-about {
+            #banner h1 {
+                max-width: 50%;
+            }
+
+            #signup_button_container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #signup_button_container button {
+                border: none;
+                border-radius: 4px;
+                background: #FF6565;
+                color: white;
+                cursor: pointer;
+                
+                height: 40px;
+                width: 120px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            #signup_button_container button:hover {
+                opacity: 0.75;
+            }
+
+            #instructor-about {
                 display: flex;
             }
 
             #instructor-image {
-                width: 200px;
-                height: 200px;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
             }
 
             h2 {
@@ -43,24 +98,58 @@
                 margin-bottom: 24px;
             }
 
-            .faq-question {
-                font-weight: bolder;
+            .faq-entry {
+                margin-bottom: 24px;
             }
 
+            .faq-question {
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+
+            @media screen and (max-width: 640px) {
+                nav {
+                    justify-content: center;
+                }
+                #banner {
+                    display: block;
+                }
+                #banner h1 {
+                    max-width: 100%;
+                }
+
+                #signup_button_container a {
+                    width: 100%;
+                }
+
+                #signup_button_container button {
+                    width: 100%;
+                }
+
+                #instructor-about {
+                    flex-direction: column-reverse;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #instructor-image {
+                    margin-bottom: 24px;
+                }
+            }
         </style>
     </head>
     <body>
         <nav>
-            <a href="https://www.anakage.com">
+            <a href="https://www.anakage.com" target="_blank">
                 <img src="https://anakage.com/assets/img/logo/logo.png">
             </a>
         </nav>
         <main>
             <section id="banner">
                 <h1>WEB DEVELOPMENT & ASSESSMENT WORKSHOP</h1>
-                <div>
+                <div id="signup_button_container">
                     <img src="https://drive.google.com/uc?id=16praR60B_FuXWiOCQZLxN2BiaTapPypX">
-                    <a href="https://forms.google.com">
+                    <a href="https://forms.google.com" target="_blank">
                         <button>SIGN UP</button>
                     </a>
                 </div>
@@ -93,7 +182,7 @@ At the end of this workshop you will learn the very basics of:
             <section id="instructor">
                 <h3>ABOUT THE INSTRUCTOR</h3>
                 <div id="instructor-about">
-                    <p>
+                    <p id="instructor-description">
                         Renzil D'Souza has been coding since he was 13. He has spent more than a decade in the industry building software and has received numerous engineering awards and patents for his work. He enjoys coming up with new ideas and coding them, and is currently helping others bring their ideas to life.
                     </p>
                     <img id="instructor-image" src="https://renzil.github.io/images/renzil.png">
@@ -154,7 +243,7 @@ At the end of this workshop you will learn the very basics of:
                         How do I register for the workshop?
                     </p>
                     <p class="faq-answer">
-                        <a href="https://forms.google.com">Click here to register.</a> After registration you will receive an email with details on how to join the workshop.
+                        <a href="https://forms.google.com" target="_blank">Click here to register.</a> After registration you will receive an email with details on how to join the workshop.
                     </p>
                 </div>
             </section>
